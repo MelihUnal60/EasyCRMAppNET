@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCRMAppNET.Domain", "EasyCRMAppNET.Domain\EasyCRMAppNET.Domain.csproj", "{80824AD7-B91E-40D7-BCFB-494376C2A04F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCRMAppNET.Infrastructure", "EasyCRMAppNET.Infrastructure\EasyCRMAppNET.Infrastructure.csproj", "{6167B562-CBFF-43CB-8530-0DD6B627B4FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCRMAppNET.Infrastructure.EFCore", "EasyCRMAppNET.Infrastructure.EFCore\EasyCRMAppNET.Infrastructure.EFCore.csproj", "{C7C28C0A-FC98-419A-8E3E-41338350B58D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCRMAppNET.Infrastructure.IOToTXT", "EasyCRMAppNET.Infrastructure.IOToTXT\EasyCRMAppNET.Infrastructure.IOToTXT.csproj", "{C5439B9C-512F-4D99-8E87-B9F413EFB38A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCRMAppNET.App", "EasyCRMAppNET.App\EasyCRMAppNET.App.csproj", "{3652A439-989D-407F-AEF1-196E84779B2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCRMAppNET.Presentation.WinForm", "EasyCRMAppNET.Presentation.WinForm\EasyCRMAppNET.Presentation.WinForm.csproj", "{D6D83EB7-227F-45B9-9945-CA854353BD6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80824AD7-B91E-40D7-BCFB-494376C2A04F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80824AD7-B91E-40D7-BCFB-494376C2A04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80824AD7-B91E-40D7-BCFB-494376C2A04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80824AD7-B91E-40D7-BCFB-494376C2A04F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6167B562-CBFF-43CB-8530-0DD6B627B4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6167B562-CBFF-43CB-8530-0DD6B627B4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6167B562-CBFF-43CB-8530-0DD6B627B4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6167B562-CBFF-43CB-8530-0DD6B627B4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C28C0A-FC98-419A-8E3E-41338350B58D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C28C0A-FC98-419A-8E3E-41338350B58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C28C0A-FC98-419A-8E3E-41338350B58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C28C0A-FC98-419A-8E3E-41338350B58D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5439B9C-512F-4D99-8E87-B9F413EFB38A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5439B9C-512F-4D99-8E87-B9F413EFB38A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5439B9C-512F-4D99-8E87-B9F413EFB38A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5439B9C-512F-4D99-8E87-B9F413EFB38A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3652A439-989D-407F-AEF1-196E84779B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3652A439-989D-407F-AEF1-196E84779B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3652A439-989D-407F-AEF1-196E84779B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3652A439-989D-407F-AEF1-196E84779B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D83EB7-227F-45B9-9945-CA854353BD6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D83EB7-227F-45B9-9945-CA854353BD6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D83EB7-227F-45B9-9945-CA854353BD6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D83EB7-227F-45B9-9945-CA854353BD6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02E42A1D-E9A2-48E1-9235-842FAEA4DF82}
+	EndGlobalSection
+EndGlobal
