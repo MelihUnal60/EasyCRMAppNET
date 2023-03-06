@@ -18,10 +18,16 @@ namespace EasyCRMAppNET.App
 
             IOCContainer.Register<IRepository<Category>>(() => new TextFileRepository<Category>());
             IOCContainer.Register<ICategoryService>(() => new CategoryService());
+            IOCContainer.Register<IOpportunityService>(() => new OpportunityService());
+            IOCContainer.Register<IRepository<Opportunity>>(() => new TextFileRepository<Opportunity>());
         }
         public static IRepository<Category> Method()
         {
             return new TextFileRepository<Category>();
+        }
+        public static IRepository<Opportunity> OpportunityMethod()
+        {
+            return new TextFileRepository<Opportunity>();
         }
     }
 }

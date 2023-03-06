@@ -40,9 +40,24 @@
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.duzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtOppOwner = new System.Windows.Forms.TextBox();
+            this.txtOppStatus = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCustomer = new System.Windows.Forms.TextBox();
+            this.btnSaveOpp = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtOppName = new System.Windows.Forms.TextBox();
+            this.txtOppId = new System.Windows.Forms.TextBox();
+            this.grdOpportunities = new System.Windows.Forms.DataGridView();
             this.NewCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCategory)).BeginInit();
             this.ctxgrdCategoryMenu.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdOpportunities)).BeginInit();
             this.SuspendLayout();
             // 
             // NewCategory
@@ -123,32 +138,154 @@
             this.toolStripSeparator1,
             this.duzenleToolStripMenuItem});
             this.ctxgrdCategoryMenu.Name = "contextMenuStrip1";
-            this.ctxgrdCategoryMenu.Size = new System.Drawing.Size(211, 86);
+            this.ctxgrdCategoryMenu.Size = new System.Drawing.Size(133, 58);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(129, 6);
             // 
-            // düzenleToolStripMenuItem
+            // duzenleToolStripMenuItem
             // 
-            this.duzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.duzenleToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.duzenleToolStripMenuItem.Name = "duzenleToolStripMenuItem";
+            this.duzenleToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.duzenleToolStripMenuItem.Text = "Düzenle";
             this.duzenleToolStripMenuItem.Click += new System.EventHandler(this.duzenleToolStripMenuItem_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.txtOppOwner);
+            this.groupBox2.Controls.Add(this.txtOppStatus);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtCustomer);
+            this.groupBox2.Controls.Add(this.btnSaveOpp);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtOppName);
+            this.groupBox2.Controls.Add(this.txtOppId);
+            this.groupBox2.Location = new System.Drawing.Point(777, 40);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(604, 287);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Fırsat Köşesi";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(61, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Fırsat Sahibi";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(61, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Durum";
+            // 
+            // txtOppOwner
+            // 
+            this.txtOppOwner.Location = new System.Drawing.Point(203, 173);
+            this.txtOppOwner.Name = "txtOppOwner";
+            this.txtOppOwner.Size = new System.Drawing.Size(395, 27);
+            this.txtOppOwner.TabIndex = 8;
+            // 
+            // txtOppStatus
+            // 
+            this.txtOppStatus.Location = new System.Drawing.Point(203, 140);
+            this.txtOppStatus.Name = "txtOppStatus";
+            this.txtOppStatus.Size = new System.Drawing.Size(395, 27);
+            this.txtOppStatus.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(61, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 20);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Müşteri";
+            // 
+            // txtCustomer
+            // 
+            this.txtCustomer.Location = new System.Drawing.Point(203, 107);
+            this.txtCustomer.Name = "txtCustomer";
+            this.txtCustomer.Size = new System.Drawing.Size(395, 27);
+            this.txtCustomer.TabIndex = 5;
+            // 
+            // btnSaveOpp
+            // 
+            this.btnSaveOpp.Location = new System.Drawing.Point(448, 231);
+            this.btnSaveOpp.Name = "btnSaveOpp";
+            this.btnSaveOpp.Size = new System.Drawing.Size(150, 29);
+            this.btnSaveOpp.TabIndex = 4;
+            this.btnSaveOpp.Text = "KAYDET";
+            this.btnSaveOpp.UseVisualStyleBackColor = true;
+            this.btnSaveOpp.Click += new System.EventHandler(this.btnSaveOpp_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(61, 75);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 20);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Fırsat Adı";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(61, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Fırsat ID";
+            // 
+            // txtOppName
+            // 
+            this.txtOppName.Location = new System.Drawing.Point(203, 73);
+            this.txtOppName.Name = "txtOppName";
+            this.txtOppName.Size = new System.Drawing.Size(395, 27);
+            this.txtOppName.TabIndex = 1;
+            // 
+            // txtOppId
+            // 
+            this.txtOppId.Location = new System.Drawing.Point(203, 40);
+            this.txtOppId.Name = "txtOppId";
+            this.txtOppId.Size = new System.Drawing.Size(395, 27);
+            this.txtOppId.TabIndex = 0;
+            // 
+            // grdOpportunities
+            // 
+            this.grdOpportunities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdOpportunities.Location = new System.Drawing.Point(781, 333);
+            this.grdOpportunities.Name = "grdOpportunities";
+            this.grdOpportunities.RowHeadersWidth = 51;
+            this.grdOpportunities.RowTemplate.Height = 29;
+            this.grdOpportunities.Size = new System.Drawing.Size(600, 367);
+            this.grdOpportunities.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 735);
+            this.Controls.Add(this.grdOpportunities);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grdCategory);
             this.Controls.Add(this.NewCategory);
             this.Name = "Form1";
@@ -158,6 +295,9 @@
             this.NewCategory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCategory)).EndInit();
             this.ctxgrdCategoryMenu.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdOpportunities)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,5 +322,16 @@
         private ToolStripMenuItem silToolStripMenuItem;
         private ToolStripMenuItem duzenleToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
+        private GroupBox groupBox2;
+        private Label label6;
+        private Label label5;
+        private TextBox txtOppName;
+        private TextBox txtOppId;
+        private Button btnSaveOpp;
+        private Label label7;
+        private TextBox txtCustomer;
+        private DataGridView grdOpportunities;
+        private TextBox txtOppOwner;
+        private TextBox txtOppStatus;
     }
 }

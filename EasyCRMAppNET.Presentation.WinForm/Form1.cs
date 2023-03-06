@@ -15,15 +15,22 @@ namespace EasyCRMAppNET.Presentation.WinForm
         }
 
         ICategoryService categoryService = IOCContainer.Resolve<ICategoryService>();
+        IOpportunityService opportunityService = IOCContainer.Resolve<IOpportunityService>();
 
         private void AddCategoryToGrid()
         {
             grdCategory.DataSource = categoryService.GetCategories();
         }
 
+        private void AddOpportunityToGrid()
+        {
+            grdOpportunities.DataSource = opportunityService.GetOpportunities();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             AddCategoryToGrid();
+            AddOpportunityToGrid();
         }
 
         private void btnSaveCategory_Click(object sender, EventArgs e)
@@ -75,6 +82,15 @@ namespace EasyCRMAppNET.Presentation.WinForm
             btnSaveCategory.Text = "Güncelle";
             NewCategory.Text = "Kategori Güncelle";
             
+        }
+
+        private void btnSaveOpp_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtOppId.Text);
+            opportunityService.CreateOpportunity(id, txtOppName.Text, txtOppStatus.Text, txtOppOwner.Text, txtCustomer.Text);
+            
+
+            AddOpportunityToGrid();
         }
     }
 }   
