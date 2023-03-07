@@ -67,6 +67,7 @@ namespace EasyCRMAppNET.Presentation.WinForm
 
             int id = Convert.ToInt32(grdCategory.CurrentRow.Cells["Id"].Value);
             categoryService.Delete(id);
+            
             AddCategoryToGrid();
         }
 
@@ -86,11 +87,65 @@ namespace EasyCRMAppNET.Presentation.WinForm
 
         private void btnSaveOpp_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtOppId.Text);
-            opportunityService.CreateOpportunity(id, txtOppName.Text, txtOppStatus.Text, txtOppOwner.Text, txtCustomer.Text);
-            
+            if (btnSaveOpp.Text == "KAYDET")
+            {
+                int id = Convert.ToInt32(txtOppId.Text);
+                opportunityService.CreateOpportunity(id, txtOppName.Text, txtOppStatus.Text, txtOppOwner.Text, txtCustomer.Text);
+            }
+            else
+            {
+                opportunityService.UpdateOpportunity(Convert.ToInt32(txtOppId.Text), txtOppName.Text, txtOppStatus.Text);
+                btnSaveOpp.Text = "KAYDET";
+                groupBox2.Text = "Fýrsat Köþesi";
+                txtOppId.Enabled= true;
+            }
+
+            txtOppId.Text = "";
+            txtCustomer.Text = "";
+            txtOppName.Text = "";
+            txtOppOwner.Text = "";
+            txtOppStatus.Text = "";
+
 
             AddOpportunityToGrid();
         }
+
+        private void firsatSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string opportunityName = grdOpportunities.CurrentRow.Cells["Name"].Value.ToString();
+            DialogResult dialogResult = MessageBox.Show($"{opportunityName} isimli fýrsati silmek istediðinizden emin misiz?", "Silme Onay",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.No)
+                return;
+
+            int opportunityId = Convert.ToInt32(grdOpportunities.CurrentRow.Cells["Id"].Value);
+            opportunityService.DeleteOpportunity(opportunityId);
+            AddOpportunityToGrid();
+
+        }
+
+        private void firsatDuzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string opportunityName = grdOpportunities.CurrentRow.Cells["Name"].Value.ToString();
+            string opportunityId = grdOpportunities.CurrentRow.Cells["Id"].Value.ToString();
+            string opportunityStatus = grdOpportunities.CurrentRow.Cells["Status"].Value.ToString();
+            string customer = grdOpportunities.CurrentRow.Cells["Customer"].Value.ToString() ;
+            string owner = grdOpportunities.CurrentRow.Cells["Owner"].Value.ToString();
+
+            txtOppId.Text = opportunityId;
+            txtOppName.Text = opportunityName;
+            txtCustomer.Text = customer;
+            txtOppOwner.Text = owner;
+            txtOppStatus.Text = opportunityStatus;
+
+            txtOppId.Enabled= false;
+            btnSaveOpp.Text = "Fýrsatý Güncelle";
+            groupBox2.Text= "Fýrsat Güncelleme";
+
+
+        }
+
+        
     }
 }   

@@ -17,6 +17,6 @@ namespace EasyCRMAppNET.Domain.Entities
 
         public string Owner { get; set; }
 
-        public int OpportunityId { get; set; }
+       
     }
 }

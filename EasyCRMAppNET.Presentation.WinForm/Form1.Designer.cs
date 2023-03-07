@@ -53,11 +53,16 @@
             this.txtOppName = new System.Windows.Forms.TextBox();
             this.txtOppId = new System.Windows.Forms.TextBox();
             this.grdOpportunities = new System.Windows.Forms.DataGridView();
+            this.ctxgrdOppMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.fırsatSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.fırsatDüzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NewCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCategory)).BeginInit();
             this.ctxgrdCategoryMenu.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdOpportunities)).BeginInit();
+            this.ctxgrdOppMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // NewCategory
@@ -272,12 +277,44 @@
             // grdOpportunities
             // 
             this.grdOpportunities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdOpportunities.ContextMenuStrip = this.ctxgrdOppMenu;
             this.grdOpportunities.Location = new System.Drawing.Point(781, 333);
             this.grdOpportunities.Name = "grdOpportunities";
             this.grdOpportunities.RowHeadersWidth = 51;
             this.grdOpportunities.RowTemplate.Height = 29;
             this.grdOpportunities.Size = new System.Drawing.Size(600, 367);
             this.grdOpportunities.TabIndex = 3;
+            
+            // 
+            // ctxgrdOppMenu
+            // 
+            this.ctxgrdOppMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.ctxgrdOppMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fırsatSilToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.fırsatDüzenleToolStripMenuItem});
+            this.ctxgrdOppMenu.Name = "ctxgrdOppMenu";
+            this.ctxgrdOppMenu.Size = new System.Drawing.Size(172, 58);
+            this.ctxgrdOppMenu.Text = "ctxgrdOppMenu";
+            // 
+            // fırsatSilToolStripMenuItem
+            // 
+            this.fırsatSilToolStripMenuItem.Name = "fırsatSilToolStripMenuItem";
+            this.fırsatSilToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.fırsatSilToolStripMenuItem.Text = "Fırsat Sil";
+            this.fırsatSilToolStripMenuItem.Click += new System.EventHandler(this.firsatSilToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(168, 6);
+            // 
+            // fırsatDüzenleToolStripMenuItem
+            // 
+            this.fırsatDüzenleToolStripMenuItem.Name = "fırsatDüzenleToolStripMenuItem";
+            this.fırsatDüzenleToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.fırsatDüzenleToolStripMenuItem.Text = "Fırsat Düzenle";
+            this.fırsatDüzenleToolStripMenuItem.Click += new System.EventHandler(this.firsatDuzenleToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -298,6 +335,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdOpportunities)).EndInit();
+            this.ctxgrdOppMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -333,5 +371,9 @@
         private DataGridView grdOpportunities;
         private TextBox txtOppOwner;
         private TextBox txtOppStatus;
+        private ContextMenuStrip ctxgrdOppMenu;
+        private ToolStripMenuItem fırsatSilToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripMenuItem fırsatDüzenleToolStripMenuItem;
     }
 }
