@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace EasyCRMAppNET.App
@@ -41,12 +42,11 @@ namespace EasyCRMAppNET.App
             _opportunityRepository.Add(opportunity);
         }
 
-       
-
         public bool DeleteOpportunity(int opportunityId)
         {
             return _opportunityRepository.Remove(opportunityId);
         }
+
 
         public IReadOnlyCollection<Opportunity> GetOpportunities()
         {
@@ -70,6 +70,5 @@ namespace EasyCRMAppNET.App
             return _opportunityRepository.Update(opportunityId, opportunity);
         }
 
-        
     }
 }

@@ -16,5 +16,6 @@ namespace EasyCRMAppNET.App
         IReadOnlyCollection<Opportunity> GetOpportunities();
 
         Opportunity UpdateOpportunity(int opportunityId, string newOpportunityName, string opportunityStatus, int categoryId, string customer,string owner);
+
     }
 }

@@ -64,19 +64,37 @@ namespace EasyCRMAppNET.Presentation.WinForm
 
         private void silToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string categoryName = grdCategory.CurrentRow.Cells["Id"].Value.ToString();
+            string categoryName = grdCategory.CurrentRow.Cells["Name"].Value.ToString();
+            int categoryId = Convert.ToInt32(grdCategory.CurrentRow.Cells["Id"].Value);
            DialogResult result = MessageBox.Show($"{categoryName} kategorisi silmek istediðinizden emin misiniz?",
                 "Silme Onayý",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
             if (result == DialogResult.No)
                 return;
+            else
+            {
+                DialogResult result1 = MessageBox.Show($"{categoryName} kategorisi ile birlikte, kategorideki fýrsatlar da silinecektir!!",
+                    "Birlikte silme onayý",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if (result1 == DialogResult.No)
+                    return;
+                else
+                {
+                    categoryService.Delete(categoryId);
+                    var opp = opportunityService.GetOpportunities().FirstOrDefault(x => x.CategoryId == categoryId);
+                    opportunityService.DeleteOpportunity(opp.Id);
+                }
+            }        
+            
 
-
-            int id = Convert.ToInt32(grdCategory.CurrentRow.Cells["Id"].Value);
-            categoryService.Delete(id);
+            
+            
             
             AddCategoryToGrid();
+            AddCategoriesToCbb();
+            AddOpportunityToGrid();
         }
 
         private void duzenleToolStripMenuItem_Click(object sender, EventArgs e)
