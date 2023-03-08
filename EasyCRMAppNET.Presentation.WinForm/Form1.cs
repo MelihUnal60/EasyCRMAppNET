@@ -27,10 +27,18 @@ namespace EasyCRMAppNET.Presentation.WinForm
             grdOpportunities.DataSource = opportunityService.GetOpportunities();
         }
 
+        private void AddCategoriesToCbb()
+        {
+            cbbOppCat.DataSource = categoryService.GetCategories();
+            cbbOppCat.DisplayMember = nameof(Category.Name);
+            cbbOppCat.ValueMember = nameof(Category.Id);
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             AddCategoryToGrid();
             AddOpportunityToGrid();
+            AddCategoriesToCbb();
         }
 
         private void btnSaveCategory_Click(object sender, EventArgs e)
@@ -85,16 +93,18 @@ namespace EasyCRMAppNET.Presentation.WinForm
             
         }
 
+
         private void btnSaveOpp_Click(object sender, EventArgs e)
         {
             if (btnSaveOpp.Text == "KAYDET")
             {
                 int id = Convert.ToInt32(txtOppId.Text);
-                opportunityService.CreateOpportunity(id, txtOppName.Text, txtOppStatus.Text, txtOppOwner.Text, txtCustomer.Text);
+                opportunityService.CreateOpportunity(id, txtOppName.Text, txtOppStatus.Text, txtOppOwner.Text, txtCustomer.Text,Convert.ToInt32(cbbOppCat.SelectedValue));
             }
             else
             {
-                opportunityService.UpdateOpportunity(Convert.ToInt32(txtOppId.Text), txtOppName.Text, txtOppStatus.Text);
+                opportunityService.UpdateOpportunity(Convert.ToInt32(txtOppId.Text), txtOppName.Text, txtOppStatus.Text,cbbOppCat.SelectedIndex,txtCustomer.Text,txtOppOwner.Text);
+                
                 btnSaveOpp.Text = "KAYDET";
                 groupBox2.Text = "Fýrsat Köþesi";
                 txtOppId.Enabled= true;
@@ -146,6 +156,5 @@ namespace EasyCRMAppNET.Presentation.WinForm
 
         }
 
-        
     }
 }   

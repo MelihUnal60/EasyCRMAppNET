@@ -41,6 +41,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.duzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtOppOwner = new System.Windows.Forms.TextBox();
@@ -57,6 +58,7 @@
             this.fırsatSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.fırsatDüzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbbOppCat = new System.Windows.Forms.ComboBox();
             this.NewCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCategory)).BeginInit();
             this.ctxgrdCategoryMenu.SuspendLayout();
@@ -166,6 +168,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbbOppCat);
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtOppOwner);
@@ -177,17 +181,26 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txtOppName);
             this.groupBox2.Controls.Add(this.txtOppId);
-            this.groupBox2.Location = new System.Drawing.Point(777, 40);
+            this.groupBox2.Location = new System.Drawing.Point(777, 29);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(604, 287);
+            this.groupBox2.Size = new System.Drawing.Size(604, 298);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fırsat Köşesi";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(61, 205);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 20);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Kategori";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 180);
+            this.label4.Location = new System.Drawing.Point(61, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 10;
@@ -196,7 +209,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 143);
+            this.label3.Location = new System.Drawing.Point(61, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 9;
@@ -204,14 +217,14 @@
             // 
             // txtOppOwner
             // 
-            this.txtOppOwner.Location = new System.Drawing.Point(203, 173);
+            this.txtOppOwner.Location = new System.Drawing.Point(203, 172);
             this.txtOppOwner.Name = "txtOppOwner";
             this.txtOppOwner.Size = new System.Drawing.Size(395, 27);
             this.txtOppOwner.TabIndex = 8;
             // 
             // txtOppStatus
             // 
-            this.txtOppStatus.Location = new System.Drawing.Point(203, 140);
+            this.txtOppStatus.Location = new System.Drawing.Point(203, 137);
             this.txtOppStatus.Name = "txtOppStatus";
             this.txtOppStatus.Size = new System.Drawing.Size(395, 27);
             this.txtOppStatus.TabIndex = 7;
@@ -219,7 +232,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(61, 110);
+            this.label7.Location = new System.Drawing.Point(61, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 20);
             this.label7.TabIndex = 6;
@@ -227,14 +240,14 @@
             // 
             // txtCustomer
             // 
-            this.txtCustomer.Location = new System.Drawing.Point(203, 107);
+            this.txtCustomer.Location = new System.Drawing.Point(203, 104);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(395, 27);
             this.txtCustomer.TabIndex = 5;
             // 
             // btnSaveOpp
             // 
-            this.btnSaveOpp.Location = new System.Drawing.Point(448, 231);
+            this.btnSaveOpp.Location = new System.Drawing.Point(448, 251);
             this.btnSaveOpp.Name = "btnSaveOpp";
             this.btnSaveOpp.Size = new System.Drawing.Size(150, 29);
             this.btnSaveOpp.TabIndex = 4;
@@ -245,7 +258,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(61, 75);
+            this.label6.Location = new System.Drawing.Point(61, 71);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 20);
             this.label6.TabIndex = 3;
@@ -254,7 +267,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(61, 40);
+            this.label5.Location = new System.Drawing.Point(61, 38);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 20);
             this.label5.TabIndex = 2;
@@ -262,14 +275,14 @@
             // 
             // txtOppName
             // 
-            this.txtOppName.Location = new System.Drawing.Point(203, 73);
+            this.txtOppName.Location = new System.Drawing.Point(203, 71);
             this.txtOppName.Name = "txtOppName";
             this.txtOppName.Size = new System.Drawing.Size(395, 27);
             this.txtOppName.TabIndex = 1;
             // 
             // txtOppId
             // 
-            this.txtOppId.Location = new System.Drawing.Point(203, 40);
+            this.txtOppId.Location = new System.Drawing.Point(203, 38);
             this.txtOppId.Name = "txtOppId";
             this.txtOppId.Size = new System.Drawing.Size(395, 27);
             this.txtOppId.TabIndex = 0;
@@ -284,7 +297,6 @@
             this.grdOpportunities.RowTemplate.Height = 29;
             this.grdOpportunities.Size = new System.Drawing.Size(600, 367);
             this.grdOpportunities.TabIndex = 3;
-            
             // 
             // ctxgrdOppMenu
             // 
@@ -315,6 +327,14 @@
             this.fırsatDüzenleToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.fırsatDüzenleToolStripMenuItem.Text = "Fırsat Düzenle";
             this.fırsatDüzenleToolStripMenuItem.Click += new System.EventHandler(this.firsatDuzenleToolStripMenuItem_Click);
+            // 
+            // cbbOppCat
+            // 
+            this.cbbOppCat.FormattingEnabled = true;
+            this.cbbOppCat.Location = new System.Drawing.Point(203, 209);
+            this.cbbOppCat.Name = "cbbOppCat";
+            this.cbbOppCat.Size = new System.Drawing.Size(395, 28);
+            this.cbbOppCat.TabIndex = 14;
             // 
             // Form1
             // 
@@ -375,5 +395,7 @@
         private ToolStripMenuItem fırsatSilToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripMenuItem fırsatDüzenleToolStripMenuItem;
+        private Label label9;
+        private ComboBox cbbOppCat;
     }
 }

@@ -18,7 +18,7 @@ namespace EasyCRMAppNET.App
             _opportunityRepository = IOCContainer.Resolve<IRepository<Opportunity>>();
         }
 
-        public void CreateOpportunity(int id, string name, string opportunityStatus, string opportunityOwner, string customer)
+        public void CreateOpportunity(int id, string name, string opportunityStatus, string opportunityOwner, string customer,int categoryId)
         {
             if(string.IsNullOrWhiteSpace(name))
                 throw new ArgumentNullException("Fırsat adı boş olamaz!!");
@@ -27,15 +27,21 @@ namespace EasyCRMAppNET.App
             if (oldOpportunity != null)
                 return;
 
-            Opportunity opportunity= new Opportunity();
-            opportunity.Id = id;
-            opportunity.Name = name;
-            opportunity.Status = opportunityStatus;
-            opportunity.Owner = opportunityOwner;
-            opportunity.Customer= customer;
-            opportunity.CreatedDate= DateTime.Now;
+            Opportunity opportunity = new Opportunity
+            {
+                Id = id,
+                Name = name,
+                Status = opportunityStatus,
+                Owner = opportunityOwner,
+                Customer = customer,
+                CreatedDate = DateTime.Now,
+                CategoryId = categoryId
+            };
+
             _opportunityRepository.Add(opportunity);
         }
+
+       
 
         public bool DeleteOpportunity(int opportunityId)
         {
@@ -47,16 +53,20 @@ namespace EasyCRMAppNET.App
             return _opportunityRepository.GetList().ToList().AsReadOnly();
         }
 
-        public Opportunity UpdateOpportunity(int opportunityId, string newOpportunityName, string opportunityStatus)
+        public Opportunity UpdateOpportunity(int opportunityId, string newOpportunityName, string opportunityStatus,int categoryId,string customer,string owner)
         {
             if (string.IsNullOrWhiteSpace(newOpportunityName))
                 throw new ArgumentNullException("Fırsat adı boş olamaz!!");
 
             var opportunity = new Opportunity();
+            opportunity.Customer = customer;
+            opportunity.CategoryId = categoryId;
             opportunity.Id = opportunityId;
             opportunity.Name = newOpportunityName;
             opportunity.Status  = opportunityStatus;
             opportunity.UpdatedDate= DateTime.Now;
+            opportunity.Owner = owner; 
+            
             return _opportunityRepository.Update(opportunityId, opportunity);
         }
 
