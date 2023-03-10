@@ -83,8 +83,9 @@ namespace EasyCRMAppNET.Presentation.WinForm
                 else
                 {
                     categoryService.Delete(categoryId);
-                    var opp = opportunityService.GetOpportunities().FirstOrDefault(x => x.CategoryId == categoryId);
-                    opportunityService.DeleteOpportunity(opp.Id);
+                    int deletedId = categoryId;
+                    //var opp = opportunityService.GetOpportunities().FirstOrDefault(x => x.CategoryId == categoryId);
+                    opportunityService.DeleteOppWithCategory(deletedId);
                 }
             }        
             

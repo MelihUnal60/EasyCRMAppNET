@@ -47,6 +47,26 @@ namespace EasyCRMAppNET.App
             return _opportunityRepository.Remove(opportunityId);
         }
 
+        public bool DeleteOppWithCategory(int categoryId)
+        {
+            
+           var oppList = _opportunityRepository.GetList().Where(o => o.CategoryId == categoryId).ToList();
+
+             foreach(var opp in oppList)   //başka bir yöntem
+            {
+                _opportunityRepository.Remove(opp.Id);
+            }
+            
+            //foreach(var deleted in _opportunityRepository.GetList()) 
+            //{
+            //    if (deleted.CategoryId == categoryId) {
+            //        _opportunityRepository.Remove(categoryId);
+            //    }
+            //}
+
+
+            return true;
+        }
 
         public IReadOnlyCollection<Opportunity> GetOpportunities()
         {

@@ -87,6 +87,11 @@ namespace EasyCRMAppNET.Infrastructure.IOToTXT
             return false;
             
         }
+        //public bool RemoveOppWithCategoryId(int categoryId)
+        //{
+        //    LoadListFromFile();
+        //    var deletedOpp = Items.FirstOrDefault(x => x.)
+        //}
 
         public T Update(int id, T entity)
         {
